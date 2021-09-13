@@ -110,3 +110,13 @@ function findOdd(A) {
         }
     }
 }
+//another implementation
+function findOdd(A) {
+    for (let i = 0; i < A.length; i++) {
+        if (A.filter((el) => el === A[i]).length % 2 != 0) {
+            return A[i];
+        }
+    }
+}
+
+console.log(findOdd([1, 3, 1, 3, 1]));
