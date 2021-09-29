@@ -75,3 +75,27 @@ let books = [
 
 let rating = books.sort((a, b) => a.rating - b.rating);
 console.log(rating);
+
+//reduce
+
+console.log(
+    [3, 5, 7, 9, 11].reduce((accumulator, currentVal) => {
+        return accumulator + currentVal;
+    })
+);
+
+let result = [3, 4, 5, 6, 7].reduce((total, currentVal) => {
+    return total * currentVal;
+});
+console.log(result);
+
+const grades = [87, 67, 93, 82, 77, 95, 61];
+
+const maxGrades = grades.reduce((max, currVal) => {
+    if (currVal > max) {
+        return currVal;
+    }
+    return max;
+});
+
+console.log(maxGrades);
