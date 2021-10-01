@@ -128,3 +128,14 @@ const votesResultTwo = votes.reduce((tally, val) => {
 
 console.log(votesResult);
 console.log(votesResultTwo);
+
+const groupedByRatings = books.reduce((groupedBooks, book) => {
+    let key = Math.floor(book.rating);
+    if (!groupedBooks[key]) {
+        groupedBooks[key] = [];
+    }
+    groupedBooks[key].push(book);
+    return groupedBooks;
+}, {});
+
+console.log(groupedByRatings);
