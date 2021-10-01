@@ -99,3 +99,32 @@ const maxGrades = grades.reduce((max, currVal) => {
 });
 
 console.log(maxGrades);
+
+const maxGradesTwo = grades.reduce((max, currVal) => {
+    return Math.max(max, currVal);
+});
+
+console.log(maxGradesTwo);
+
+const minGrades = grades.reduce((min, currVal) => Math.min(min, currVal));
+
+console.log(minGrades);
+
+const votes = ["y", "n", "y", "y", "y", "n", "n", "y"];
+
+const votesResult = votes.reduce((tally, val) => {
+    if (tally[val]) {
+        tally[val]++;
+    } else {
+        tally[val] = 1;
+    }
+    return tally;
+}, {});
+
+const votesResultTwo = votes.reduce((tally, val) => {
+    tally[val] = (tally[val] || 0) + 1;
+    return tally;
+}, {});
+
+console.log(votesResult);
+console.log(votesResultTwo);
