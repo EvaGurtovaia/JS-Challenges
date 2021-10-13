@@ -192,7 +192,7 @@ function getCount(str) {
         if (vowels.includes(char)) {
             vowelsCount++;
         }
-    }
+    }                                                                                                                                                                                                                                                                                                                                                                                                                   
     return vowelsCount;
 }
 

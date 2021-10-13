@@ -139,3 +139,132 @@ const groupedByRatings = books.reduce((groupedBooks, book) => {
 }, {});
 
 console.log(groupedByRatings);
+
+// The event director needs to have all the runners' first names in uppercase
+// because the director BECAME DRUNK WITH POWER.
+//Populate an array called `firstNamesAllCaps`.
+//This array will contain just strings.
+
+const runners = [
+    {
+        id: 1,
+        first_name: "Charmain",
+        last_name: "Seiler",
+        email: "cseiler0@wired.com",
+        shirt_size: "2XL",
+        company_name: "Divanoodle",
+        donation: 75,
+    },
+    {
+        id: 2,
+        first_name: "Whitaker",
+        last_name: "Ierland",
+        email: "wierland1@angelfire.com",
+        shirt_size: "2XL",
+        company_name: "Wordtune",
+        donation: 148,
+    },
+    {
+        id: 3,
+        first_name: "Julieta",
+        last_name: "McCloid",
+        email: "jmccloid2@yahoo.com",
+        shirt_size: "S",
+        company_name: "Riffpedia",
+        donation: 171,
+    },
+    {
+        id: 4,
+        first_name: "Martynne",
+        last_name: "Paye",
+        email: "mpaye3@sciencedaily.com",
+        shirt_size: "XL",
+        company_name: "Wordware",
+        donation: 288,
+    },
+    {
+        id: 5,
+        first_name: "Gussy",
+        last_name: "Raraty",
+        email: "graraty4@ucoz.ru",
+        shirt_size: "L",
+        company_name: "Oozz",
+        donation: 291,
+    },
+    {
+        id: 6,
+        first_name: "Yule",
+        last_name: "Tommasetti",
+        email: "ytommasetti5@state.gov",
+        shirt_size: "S",
+        company_name: "Yodo",
+        donation: 27,
+    },
+    {
+        id: 7,
+        first_name: "Kathie",
+        last_name: "Majury",
+        email: "kmajury6@guardian.co.uk",
+        shirt_size: "3XL",
+        company_name: "Zoomcast",
+        donation: 261,
+    },
+    {
+        id: 8,
+        first_name: "Tanner",
+        last_name: "Branton",
+        email: "tbranton7@tmall.com",
+        shirt_size: "2XL",
+        company_name: "Realmix",
+        donation: 28,
+    },
+    {
+        id: 9,
+        first_name: "Sarina",
+        last_name: "Lasham",
+        email: "slasham8@toplist.cz",
+        shirt_size: "XL",
+        company_name: "Gigashots",
+        donation: 110,
+    },
+    {
+        id: 10,
+        first_name: "Bertie",
+        last_name: "Lonergan",
+        email: "blonergan9@issuu.com",
+        shirt_size: "3XL",
+        company_name: "Skinte",
+        donation: 62,
+    },
+];
+
+let firstNamesAllCaps = runners.map((person) => person.last_name.toUpperCase());
+console.log(firstNamesAllCaps);
+
+// The large shirts won't be available for the event due to an ordering issue.
+//We need a filtered version of the runners array,
+//containing only those runners with large sized shirts
+//so they can choose a different size. This will be an array of objects.
+
+let runnersLargeSizeShirt = runners.filter(
+    (person) => person.shirt_size === "XL"
+);
+console.log(runnersLargeSizeShirt);
+
+// The donations need to be tallied up and reported for tax purposes.
+//Add up all the donations and
+//save the total into a ticketPriceTotal variable.
+
+let ticketPriceTotal = 0;
+console.log(ticketPriceTotal);
+
+// The event director needs both the first and last names of each runner
+//for their running bibs.
+//Combine both the first and last names and populate a new array called `fullNames`.
+//This array will contain just strings.
+
+let fullName = [];
+runners.forEach((person) =>
+    fullName.push(`${person.first_name} ${person.last_name}`)
+);
+console.log(fullName);
