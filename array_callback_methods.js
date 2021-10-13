@@ -255,7 +255,10 @@ console.log(runnersLargeSizeShirt);
 //Add up all the donations and
 //save the total into a ticketPriceTotal variable.
 
-let ticketPriceTotal = 0;
+let ticketPriceTotal = runners.reduce(
+    (total, curVal) => total + curVal.donation,
+    0
+);
 console.log(ticketPriceTotal);
 
 // The event director needs both the first and last names of each runner
