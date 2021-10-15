@@ -24,3 +24,32 @@ function last(arr, cb) {
 
 const test3 = last(items, (lastItem) => `I don't like ${lastItem}!`);
 console.log(test3);
+
+function sumNums(x, y, cb) {
+    // sumNums adds two numbers (x, y) and passes the result to the callback.
+    return cb(x + y);
+}
+
+const test4 = sumNums(4, 5, (sum) => `The sum is ${sum}!`);
+console.log(test4);
+
+function multiplyNums(x, y, cb) {
+    // multiplyNums multiplies two numbers and passes the result to the callback.
+    return cb(x * y);
+}
+
+const test5 = multiplyNums(4, 5, (mult) => `The result is ${mult}!`);
+console.log(test5);
+
+function contains(item, list, cb) {
+    // contains checks if an item is present inside of the given array/list.
+    // Pass true to the callback if it is, otherwise pass false.
+    return cb(list.includes(item));
+}
+
+const test6 = contains(
+    "dog",
+    ["cat", "parrot", "fish"],
+    (ifthere) => `The result is ${ifthere}!`
+);
+console.log(test6);
