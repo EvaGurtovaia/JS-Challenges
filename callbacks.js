@@ -53,3 +53,16 @@ const test6 = contains(
     (ifthere) => `The result is ${ifthere}!`
 );
 console.log(test6);
+
+function removeDuplicates(arr, cb) {
+    // removeDuplicates removes all duplicate values from the given array.
+    // Pass the duplicate free array to the callback function.
+    // Do not mutate the original array.
+
+    return cb(Array.from(new Set(arr)));
+}
+const test7 = removeDuplicates(
+    [5, 6, 5, 7, 5, 6, 5, 8],
+    (ifthere) => `The result is ${ifthere}!`
+);
+console.log(test7);
