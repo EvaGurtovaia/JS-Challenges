@@ -38,7 +38,6 @@ function gooseFilter(birds) {
     // return an array containing all of the strings in the input array except those that match strings in geese
 }
 
-
 //Replace With Alphabet Position
 //Welcome.
 //In this kata you are required to, given a string, replace every letter with its position in the alphabet.
@@ -54,13 +53,32 @@ function alphabetPosition(str) {
     const alphabet = "abcdefghijklmnopqrstuvwxyz";
     const lowerCaseStr = str.toLowerCase();
     const result = [];
-    
+
     for (let i = 0; i < lowerCaseStr.length; i++) {
-      let index = alphabet.indexOf(lowerCaseStr[i]);
-      if (index === -1) {
-        continue;
-      } else { result.push(index + 1)}
-     
-  }
+        let index = alphabet.indexOf(lowerCaseStr[i]);
+        if (index === -1) {
+            continue;
+        } else {
+            result.push(index + 1);
+        }
+    }
     return result.join(" ");
-  }
+}
+
+//Find the smallest integer in the array
+
+//Given an array of integers your solution should find the smallest integer.
+//For example:
+//Given [34, 15, 88, 2] your solution will return 2
+//Given [34, -345, -1, 100] your solution will return -345
+//You can assume, for the purpose of this kata, that the supplied array will not be empty.
+
+class SmallestIntegerFinder {
+    findSmallestInt(args) {
+        let currentMin = args[0];
+        for (let i = 1; i < args.length; i++) {
+            if (args[i] < currentMin) currentMin = args[i];
+        }
+        return currentMin;
+    }
+}
