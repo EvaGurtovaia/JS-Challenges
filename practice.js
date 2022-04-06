@@ -230,3 +230,20 @@ function count(str) {
 function sortByLength(arr) {
     return arr.sort((a, b) => a.length - b.length);
 }
+
+function print (nums) {
+    for (let i = 1;  i < nums.lenght; i++;) {
+    console.log(nums[i])
+    if (nums[i] % 3 === 0 && nums[i] % 5 === 0){
+      console.log("FizzBuzz");
+    }
+    if (nums[i] % 3 === 0){
+      console.log("Fizz");
+    if (nums[i] % 5 === 0){
+      console.log("Buzz");
+    else {console.log(nums[i]);}
+  })
+  }
+  
+  
+   console.log(print([1,2,3,4,5,6,7,8,9,10]));

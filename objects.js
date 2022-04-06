@@ -35,3 +35,6 @@ const myDeck = {
         }
     },
 };
+
+console.log(myDeck.initializeDeck());
+console.log(myDeck.shuffle());
