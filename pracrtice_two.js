@@ -90,8 +90,24 @@ class SmallestIntegerFinder {
 
 //The array will never be empty.
 
-function getAverage(marks){
+function getAverage(marks) {
     //TODO : calculate the downward rounded average of the marks array
-   return Math.floor(marks.reduce(
-    (previousValue, currentValue) => previousValue + currentValue)/marks.length);
-  }
+    return Math.floor(
+        marks.reduce(
+            (previousValue, currentValue) => previousValue + currentValue
+        ) / marks.length
+    );
+}
+
+//Reversed sequence
+
+//Build a function that returns an array of integers from n to 1 where n>0.
+//Example : n=5 --> [5,4,3,2,1]
+
+const reverseSeq = (n) => {
+    const result = [];
+    for (let i = n; i > 0; i--) {
+        result.push(i);
+    }
+    return result;
+};
