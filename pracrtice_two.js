@@ -148,6 +148,20 @@ function finalGrade(g, p) {
 function getRectangleString(width, height) {
     const rn = "\r\n";
     const tb = "*".repeat(width) + rn;
-    const center = (width > 1) ? ("*" + " ".repeat(width-2) + "*" + rn).repeat(height-2) : "";
-    return height > 1 ? (tb + center + tb) : tb.repeat(height);
-  }
+    const center =
+        width > 1
+            ? ("*" + " ".repeat(width - 2) + "*" + rn).repeat(height - 2)
+            : "";
+    return height > 1 ? tb + center + tb : tb.repeat(height);
+}
+
+//Convert To Binary
+
+//Given a non-negative integer n, write a function to_binary/ToBinary which returns that number in a binary format.
+//to_binary(1)  /* should return 1 */
+//to_binary(5)  /* should return 101 */
+//to_binary(11) /* should return 1011 */
+
+function toBinary(n) {
+    return +n.toString(2);
+}
