@@ -246,12 +246,32 @@ function isDivideBy(num, a, b) {
 //friend ["Ryan", "Kieran", "Mark"] `shouldBe` ["Ryan", "Mark"]
 //Note: keep the original order of the names in the output.
 
-function friend(friends){
+function friend(friends) {
     let realFriends = [];
-    for (let i = 0; i < friends.length; i++){
-      if (friends[i].length === 4){
-        realFriends.push(friends[i]);
-      }
+    for (let i = 0; i < friends.length; i++) {
+        if (friends[i].length === 4) {
+            realFriends.push(friends[i]);
+        }
     }
     return realFriends;
-  }
+}
+
+//Find the first non-consecutive number
+//By not consecutive we mean not exactly 1 larger than the previous element of the array.
+
+//E.g. If we have an array [1,2,3,4,6,7,8] then 1 then 2 then 3 then 4 are all consecutive but 6 is not, so that's the first non-consecutive number.
+
+//If the whole array is consecutive then return null2.
+
+//The array will always have at least 2 elements1 and all elements will be numbers. The numbers will also all be unique and in ascending order. The numbers could be positive or negative and the first non-consecutive could be either too!
+
+function firstNonConsecutive(arr) {
+    for (let i = 0; i < arr.length - 1; i++) {
+        let current = arr[i];
+        let next = arr[i + 1];
+        if (current + 1 !== next) {
+            return next;
+        }
+    }
+    return null;
+}
