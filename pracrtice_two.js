@@ -307,6 +307,12 @@ function solve(str) {
     );
 }
 
+//A lit bit shorter code
+
+function solve(str) {
+    return Math.max(...str.split(/[aeiou]+/).map(addUpSubstr));
+}
+
 function charToValue(chr) {
     return chr.charCodeAt(0) - 96;
 }
@@ -317,3 +323,12 @@ function addUpSubstr(substr) {
         .map(charToValue)
         .reduce((previousValue, currentValue) => previousValue + currentValue);
 }
+
+
+//Remove exclamation marks
+
+//Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+
+function removeExclamationMarks(s) {
+    return s.replace(/!/g, "");
+  }
