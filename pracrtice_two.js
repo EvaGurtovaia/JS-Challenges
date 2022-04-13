@@ -324,18 +324,17 @@ function addUpSubstr(substr) {
         .reduce((previousValue, currentValue) => previousValue + currentValue);
 }
 
-
 //Remove exclamation marks
 
 //Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
 
 function removeExclamationMarks(s) {
     return s.replace(/!/g, "");
-  }
+}
 
-  //Two Oldest Ages
+//Two Oldest Ages
 
-  //The two oldest ages function/method needs to be completed. It should take an array of numbers as its argument and return the two highest numbers within the array. The returned value should be an array in the format [second oldest age, oldest age].
+//The two oldest ages function/method needs to be completed. It should take an array of numbers as its argument and return the two highest numbers within the array. The returned value should be an array in the format [second oldest age, oldest age].
 
 //The order of the numbers passed in could be any order. The array will always include at least 2 items. If there are two or more oldest age, then return both of them in array format.
 
@@ -343,11 +342,32 @@ function removeExclamationMarks(s) {
 
 //twoOldestAges( [1, 2, 10, 8] ) // should return [8, 10]
 
-function twoOldestAges(ages){
+function twoOldestAges(ages) {
     return ages.sort(sortNums).slice(-2);
-  
-  }
-  
-  function sortNums(a, b) {
+}
+
+function sortNums(a, b) {
     return a - b;
-  }
+}
+
+//Get the Middle Character
+
+//You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+//Examples:
+//Kata.getMiddle("test") should return "es"
+//Kata.getMiddle("testing") should return "t"
+//Kata.getMiddle("middle") should return "dd"
+//Kata.getMiddle("A") should return "A"
+
+function getMiddle(s) {
+    let startIdx;
+    let endIdx;
+    if (s.length % 2 === 0) {
+        startIdx = s.length / 2 - 1;
+        endIdx = startIdx + 2;
+    } else {
+        startIdx = Math.floor(s.length / 2);
+        endIdx = startIdx + 1;
+    }
+    return s.substring(startIdx, endIdx);
+}
